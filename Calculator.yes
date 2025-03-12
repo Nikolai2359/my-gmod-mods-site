@@ -1,0 +1,92 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "authorship_tag": "ABX9TyNVt2OWria1QyExfgQC8/Cv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Nikolai2359/my-gmod-mods-site/blob/main/Calculator.yes\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add(x, y):\n",
+        "    return x + y\n",
+        "\n",
+        "def subtract(x, y):\n",
+        "    return x - y\n",
+        "\n",
+        "def multiply(x, y):\n",
+        "    return x * y\n",
+        "\n",
+        "def divide(x, y):\n",
+        "    if y == 0:\n",
+        "        return \"Деление на ноль невозможно!\"\n",
+        "    return x / y\n",
+        "\n",
+        "def calculator():\n",
+        "    print(\"Простой калькулятор на Python\")\n",
+        "    print(\"Выберите операцию:\")\n",
+        "    print(\"1. Сложение\")\n",
+        "    print(\"2. Вычитание\")\n",
+        "    print(\"3. Умножение\")\n",
+        "    print(\"4. Деление\")\n",
+        "\n",
+        "    while True:\n",
+        "        choice = input(\"Введите номер операции (1/2/3/4) или 'q' для выхода: \")\n",
+        "\n",
+        "        if choice.lower() == 'q':\n",
+        "            print(\"Выход из калькулятора. До свидания!\")\n",
+        "            break\n",
+        "\n",
+        "        if choice not in ('1', '2', '3', '4'):\n",
+        "            print(\"Неверный ввод, попробуйте снова.\")\n",
+        "            continue\n",
+        "\n",
+        "        try:\n",
+        "            num1 = float(input(\"Введите первое число: \"))\n",
+        "            num2 = float(input(\"Введите второе число: \"))\n",
+        "        except ValueError:\n",
+        "            print(\"Пожалуйста, введите корректное число.\")\n",
+        "            continue\n",
+        "\n",
+        "        if choice == '1':\n",
+        "            print(\"Результат:\", add(num1, num2))\n",
+        "        elif choice == '2':\n",
+        "            print(\"Результат:\", subtract(num1, num2))\n",
+        "        elif choice == '3':\n",
+        "            print(\"Результат:\", multiply(num1, num2))\n",
+        "        elif choice == '4':\n",
+        "            print(\"Результат:\", divide(num1, num2))\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    calculator()\n"
+      ],
+      "metadata": {
+        "id": "sWoLMpkGreE7"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
